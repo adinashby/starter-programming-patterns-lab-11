@@ -28,6 +28,24 @@ class LabElevenTests {
 		
 		String[][] expected = { {"bat"}, { "nat", "tan" }, { "ate", "eat", "tea" }};
 		
+		Arrays.sort(actual, new Comparator<String[]>() {
+
+			@Override
+			public int compare(String[] o1, String[] o2) {
+				
+				return o1[0].compareTo(o2[0]);
+			}
+		});
+		
+		Arrays.sort(expected, new Comparator<String[]>() {
+
+			@Override
+			public int compare(String[] o1, String[] o2) {
+				
+				return o1[0].compareTo(o2[0]);
+			}
+		});
+		
 		assertTrue(Arrays.deepEquals(actual, expected));
 	}
 	
@@ -84,6 +102,24 @@ class LabElevenTests {
 		}
 		
 		String[][] expected = { {"act", "cat"}, {"dusty", "study"}, {"below", "elbow"} };
+		
+		Arrays.sort(actual, new Comparator<String[]>() {
+
+			@Override
+			public int compare(String[] o1, String[] o2) {
+				
+				return o1[0].compareTo(o2[0]);
+			}
+		});
+		
+		Arrays.sort(expected, new Comparator<String[]>() {
+
+			@Override
+			public int compare(String[] o1, String[] o2) {
+				
+				return o1[0].compareTo(o2[0]);
+			}
+		});
 		
 		assertTrue(Arrays.deepEquals(actual, expected));
 	}
